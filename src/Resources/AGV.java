@@ -3,7 +3,7 @@ package Resources;
 
 public class AGV extends HardwareResources{
     private double batteryLoad;
-    private double conuption;   // I think this is suppose to be consumption ? 
+    private double consumption; 
     private int chargingTime;
     private AGVPosition position;
     private float maxSpeed;
@@ -13,7 +13,7 @@ public class AGV extends HardwareResources{
     public AGV(String name ,double maintainanceCost, double batteryLoad , double conuption , int chargingTime  , float maxSpeed, float actSpeed){
         super(name , maintainanceCost);
         this.batteryLoad = batteryLoad;
-        this.conuption = conuption;
+        this.consumption = consumption;
         this.chargingTime = chargingTime;
         this.position = new AGVPosition(0, 0);
         this.maxSpeed = maxSpeed;
@@ -21,7 +21,7 @@ public class AGV extends HardwareResources{
     } 
 
     public double getCost(){
-        return super.getCost() + (conuption * 0.5);
+        return super.getCost() + (consumption * 0.5);
     }
 
 
