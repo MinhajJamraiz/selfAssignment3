@@ -1,3 +1,4 @@
+package Resources;
 public class AGVPosition {
     private int x;
     private int y;
